@@ -37,10 +37,10 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Title
+            Aqua Thailand Bid
           </h1>
           <h2 class="subtitle">
-            Subtitle
+            เว็บประมูลสัตว์น้ำ
           </h2>
         </div>
       </div>
@@ -49,14 +49,19 @@
       <div class="hero-foot">
         <nav class="tabs">
           <div class="container">
-            <ul>
-              <li class="is-active"><a>Overview</a></li>
-              <li><a>Modifiers</a></li>
-              <li><a>Grid</a></li>
-              <li><a>Elements</a></li>
-              <li><a>Components</a></li>
-              <li><a>Layout</a></li>
-            </ul>
+            <nav class="tabs is-boxed">
+              <ul>
+                <router-link to="/fish" tag="li" active-class="is-active" exact>
+                  <a href="#">ปลา</a>
+                </router-link>
+                <router-link to="/shrimp" tag="li" active-class="is-active" exact>
+                  <a href="#">กุ้ง</a>
+                </router-link>
+                <router-link to="/gadget" tag="li" active-class="is-active" exact>
+                  <a href="#">อุปกรณ์การเลี้ยงกุ้ง</a>
+                </router-link>
+              </ul>
+            </nav>
           </div>
         </nav>
       </div>
@@ -64,54 +69,24 @@
     <nav class="nav has-shadow">
       <div class="container">
         <div class="nav-left">
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/card/">
-            Card
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/level/">
-            Level
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/media-object/">
-            Media object
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/menu/">
-            Menu
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/message/">
-            Message
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/modal/">
-            Modal
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/nav/">
-            Nav
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/pagination/">
-            Pagination
-          </a>
-          <a class="nav-item is-tab " href="http://bulma.io/documentation/components/panel/">
-            Panel
-          </a>
-          <a class="nav-item is-tab is-active" href="http://bulma.io/documentation/components/tabs/">
-            Tabs
-          </a>
+          <router-link to="/" tag="a" class="nav-item is-tab" active-class="is-active" exact>home</router-link>
         </div>
       </div>
     </nav>
 
-
-    <router-link to="/" tag="a" active-class="active" exact>รถเข็นของฉัน</router-link>
-    <router-link to="/2" tag="a" active-class="active" exact>รถเข็นของฉัน</router-link>
-    <router-view></router-view>
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import Test from './components/test.vue'
+// import Test from './components/test.vue'
 export default {
   name: 'app',
-  components: {
-    Test: Test
-  },
+  // components: {
+  //   Test: Test
+  // },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
