@@ -54,13 +54,16 @@
                 <router-link to="/" tag="li" active-class="is-active" exact>
                   <a href="#">ทั้งหมด</a>
                 </router-link>
-                <router-link :to="{ path: 'fish' }" tag="li" active-class="is-active" exact>
+                <router-link :to="{ path: '/fish'}" tag="li" active-class="is-active">
                   <a href="#">ปลา</a>
                 </router-link>
-                <router-link :to="{ path: 'shrimp' }" tag="li" active-class="is-active" exact>
+                <router-link :to="{ path: '/shrimp' }" tag="li" active-class="is-active">
                   <a href="#">กุ้ง</a>
                 </router-link>
-                <router-link :to="{ path: 'gadget' }" tag="li" active-class="is-active" exact>
+                <router-link :to="{ path: '/water-tree' }" tag="li" active-class="is-active">
+                  <a href="#">ไม้น้ำ</a>
+                </router-link>
+                <router-link :to="{ path: '/gadget' }" tag="li" active-class="is-active">
                   <a href="#">อุปกรณ์การเลี้ยงกุ้ง</a>
                 </router-link>
               </ul>
@@ -75,18 +78,17 @@
 </template>
 
 <script>
-// import Test from './components/test.vue'
-export default {
-  name: 'app',
-  // components: {
-  //   Test: Test
-  // },
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  export default {
+    name: 'app',
+    // components: {
+    //   Test: Test
+    // },
+    data () {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

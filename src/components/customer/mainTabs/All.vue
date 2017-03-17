@@ -3,12 +3,12 @@
     <nav class="nav has-shadow">
       <div class="container">
         <div class="nav-left">
-          <router-link to="/" tag="a" class="nav-item is-tab" active-class="is-active" exact>home</router-link>
+          <router-link to="/" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
         </div>
       </div>
     </nav>
     <div class="container">
-      home
+      ทั้งหมด
     </div>
   </div>
 </template>
