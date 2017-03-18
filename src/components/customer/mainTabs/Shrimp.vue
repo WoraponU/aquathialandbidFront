@@ -8,9 +8,11 @@
         <router-link :to="{ path: '/shrimp/กุ้งชนิดอื่นๆ' }" tag="a" class="nav-item is-tab" active-class="is-active">กุ้งชนิดอื่นๆ</router-link>
     </SubNavBar>
     
-    <div class="container">
-      {{ id }}
-    </div>
+    <section class="section">
+      <div class="container">
+        {{ id }}
+      </div>
+    </section>
   </div>
 </template>
 

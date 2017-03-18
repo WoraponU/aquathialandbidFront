@@ -6,9 +6,11 @@
       <router-link :to="{ path: '/gadget/อุปกรณ์การเลี้ยงทะเล' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>อุปกรณ์การเลี้ยงทะเล</router-link>
     </SubNavBar>
     
-    <div class="container">
-      {{ id }}
-    </div>
+    <section class="section">
+      <div class="container">
+        {{ id }}
+      </div>
+    </section>
   </div>
 </template>
 

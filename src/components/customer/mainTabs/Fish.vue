@@ -11,9 +11,11 @@
       <router-link :to="{ path: '/fish/ปลาชนิดอื่นๆ' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ปลาชนิดอื่นๆ</router-link>
     </SubNavBar>
     
-    <div class="container">
-      {{ id }}
-    </div>
+    <section class="section">
+      <div class="container">
+        {{ id }}
+      </div>
+    </section>
   </div>
 </template>
 

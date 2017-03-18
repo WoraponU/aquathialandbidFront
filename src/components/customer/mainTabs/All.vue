@@ -4,9 +4,11 @@
       <router-link :to="{ path: '/' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
     </SubNavBar>
     
-    <div class="container">
-      {{ id }}
-    </div>
+    <section class="section">
+      <div class="container">
+        {{ id }}
+      </div>
+    </section>
   </div>
 </template>
 

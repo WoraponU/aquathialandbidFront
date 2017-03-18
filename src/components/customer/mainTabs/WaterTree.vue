@@ -8,9 +8,11 @@
       </div>
     </nav>
     
-    <div class="container">
-      {{ id }}
-    </div>
+    <section class="section">
+      <div class="container">
+        {{ id }}
+      </div>
+    </section>
   </div>
 </template>
 
