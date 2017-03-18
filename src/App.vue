@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Headera></Headera>
+    <PageHeader></PageHeader>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import Headera from './components/customer/Headera.vue'
+  import PageHeader from './components/customer/PageHeader.vue'
 
   export default {
     name: 'app',
     components: {
-      Headera,
+      PageHeader,
     },
     data () {
       return {
