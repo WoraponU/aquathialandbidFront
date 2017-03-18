@@ -1,12 +1,8 @@
 <template>
   <div>
-    <nav class="nav has-shadow">
-      <div class="container">
-        <div class="nav-left">
-          <router-link :to="{ path: '/' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
-        </div>
-      </div>
-    </nav>
+    <SubNavBar>
+      <router-link :to="{ path: '/' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
+    </SubNavBar>
     
     <div class="container">
       {{ id }}
@@ -15,7 +11,12 @@
 </template>
 
 <script>
+  import SubNavBar from '../SubNavBar.vue'
+
   export default {
+    components: {
+      SubNavBar,
+    }, 
     data () {
       return {
         id: null,
