@@ -3,6 +3,7 @@
     <nav class="nav has-shadow">
       <div class="container">
         <div class="nav-left">
+          <router-link :to="{ path: '/shrimp' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
           <router-link :to="{ path: '/shrimp/กุ้งแคระ' }" tag="a" class="nav-item is-tab" active-class="is-active">กุ้งแคระ</router-link>
           <router-link :to="{ path: '/shrimp/กุ้งเครฟิช' }" tag="a" class="nav-item is-tab" active-class="is-active">กุ้งเครฟิช</router-link>
           <router-link :to="{ path: '/shrimp/กุ้งเรดบี' }" tag="a" class="nav-item is-tab" active-class="is-active">กุ้งเรดบี</router-link>
@@ -12,7 +13,30 @@
     </nav>
     
     <div class="container">
-      กุ้ง
+      {{ id }}
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        id: null,
+      }
+    },
+    created() {
+      this.reloadId();    
+    },
+    watch: {
+      $route() {
+        this.reloadId();
+      }
+    },
+    methods: {
+      reloadId() {
+        this.id = this.$route.params.id === undefined ? 'ทั้งหมด' : this.$route.params.id;
+      }
+    }
+  }
+</script>
