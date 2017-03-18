@@ -28,12 +28,25 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
-            Aqua Thailand Bid
-          </h1>
-          <h2 class="subtitle">
-            เว็บประมูลสัตว์น้ำ
-          </h2>
+          <div class="columns is-vcentered">
+            <div class="column">
+              <h1 class="title">
+                Aqua Thailand Bid
+              </h1>
+              <h2 class="subtitle">
+                เว็บประมูลสัตว์น้ำ
+              </h2>
+            </div>
+            <div class="column is-narrow">
+              <div id="carbon" class="box">
+                <div>
+                  <span>facebook
+                    <span class="carbon-wrap">facebook</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
