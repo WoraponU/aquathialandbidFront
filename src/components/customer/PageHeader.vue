@@ -6,10 +6,6 @@
           <a class="nav-item">
             <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
           </a>
-          <a class="nav-item is-hidden-mobile is-tab is-active">Home</a>
-          <a class="nav-item is-hidden-mobile">Features</a>
-          <a class="nav-item is-hidden-mobile">Pricing</a>
-          <a class="nav-item is-hidden-mobile">About</a>
         </div>
         <span class="nav-toggle">
           <span></span>
@@ -17,10 +13,6 @@
           <span></span>
         </span>
         <div class="nav-right nav-menu">
-          <a class="nav-item is-hidden-tablet is-active">Home</a>
-          <a class="nav-item is-hidden-tablet">Features</a>
-          <a class="nav-item is-hidden-tablet">Pricing</a>
-          <a class="nav-item is-hidden-tablet">About</a>
           <a class="nav-item">
             <figure class="image is-16x16" style="margin-right: 8px;">
               <img src="http://bulma.io/images/jgthms.png">
@@ -47,29 +39,27 @@
 
       <!-- Hero footer: will stick at the bottom -->
       <div class="hero-foot">
-        <nav class="tabs">
-          <div class="container">
-            <nav class="tabs is-boxed">
-              <ul>
-                <router-link to="/" tag="li" active-class="is-active" exact>
-                  <a href="#">ทั้งหมด</a>
-                </router-link>
-                <router-link :to="{ path: '/fish'}" tag="li" active-class="is-active">
-                  <a href="#">ปลา</a>
-                </router-link>
-                <router-link :to="{ path: '/shrimp' }" tag="li" active-class="is-active">
-                  <a href="#">กุ้ง</a>
-                </router-link>
-                <router-link :to="{ path: '/water-tree' }" tag="li" active-class="is-active">
-                  <a href="#">ไม้น้ำ</a>
-                </router-link>
-                <router-link :to="{ path: '/gadget' }" tag="li" active-class="is-active">
-                  <a href="#">อุปกรณ์การเลี้ยงกุ้ง</a>
-                </router-link>
-              </ul>
-            </nav>
-          </div>
-        </nav>
+        <div class="container">
+          <nav class="tabs is-boxed">
+            <ul>
+              <router-link to="/" tag="li" active-class="is-active" exact>
+                <a href="#">ทั้งหมด</a>
+              </router-link>
+              <router-link :to="{ path: '/fish'}" tag="li" active-class="is-active">
+                <a href="#">ปลา</a>
+              </router-link>
+              <router-link :to="{ path: '/shrimp' }" tag="li" active-class="is-active">
+                <a href="#">กุ้ง</a>
+              </router-link>
+              <router-link :to="{ path: '/water-tree' }" tag="li" active-class="is-active">
+                <a href="#">ไม้น้ำ</a>
+              </router-link>
+              <router-link :to="{ path: '/gadget' }" tag="li" active-class="is-active">
+                <a href="#">อุปกรณ์การเลี้ยงกุ้ง</a>
+              </router-link>
+            </ul>
+          </nav>
+        </div>
       </div>
     </section>
   </div>
