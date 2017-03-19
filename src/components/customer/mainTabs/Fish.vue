@@ -12,7 +12,7 @@
     </SubNavBar>
     
     <PageBody>
-      <Card :cardData="testData"></Card>
+      <Card :cardDatas="testData"></Card>
       {{ id }}
     </PageBody>
   </div>
@@ -32,7 +32,13 @@
     data () {
       return {
         id: null,
-        testData: [{a:'a'},{b:'b'}],
+        testData: [
+          { a: 'a' },
+          { b: 'b' },
+          { c: 'c' },
+          { d: 'd' },
+          { e: 'e' },
+        ],
       }
     },
     created() {

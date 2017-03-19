@@ -1,6 +1,6 @@
 <template>
-  <div class="columns">
-    <div class="column is-one-third">
+  <div class="columns is-multiline">
+    <div class="column is-one-third" v-for="cardData in cardDatas">
       <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
@@ -35,9 +35,6 @@
 
 <script>
   export default {
-    props: ['cardData'],
-    created() {
-      console.log(this.cardData);
-    }
+    props: ['cardDatas'],
   }
 </script>

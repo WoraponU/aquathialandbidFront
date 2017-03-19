@@ -1,26 +1,37 @@
 <template>
   <div>
-    <nav class="nav has-shadow">
-      <div class="container">
-        <div class="nav-left">
-          <router-link :to="{ path: '/water-tree' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
-        </div>
-      </div>
-    </nav>
+    <SubNavBar>
+      <router-link :to="{ path: '/water-tree' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
+    </SubNavBar>
     
-    <section class="section">
-      <div class="container">
-        {{ id }}
-      </div>
-    </section>
+    <PageBody>
+      <Card :cardDatas="testData"></Card>
+      {{ id }}
+    </PageBody>
   </div>
 </template>
 
 <script>
+  import PageBody from '../PageBody.vue'
+  import SubNavBar from '../SubNavBar.vue'
+  import Card from '../Card.vue'
+
   export default {
+    components: {
+      SubNavBar,
+      PageBody,
+      Card,
+    }, 
     data () {
       return {
         id: null,
+        testData: [
+          { a: 'a' },
+          { b: 'b' },
+          { c: 'c' },
+          { d: 'd' },
+          { e: 'e' },
+        ],
       }
     },
     created() {
