@@ -27,10 +27,22 @@
       PageBody,
     },
     created() {
-      this.$router.replace({
-          name: 'route-show-fish-of-type', 
-          params: { type: 'ปลาทั้งหมด' },
-      });
-    }
+      this.reloadRoute();
+    },
+    watch: {
+      $route() {
+        this.reloadRoute();
+      }
+    },
+    methods: {
+      reloadRoute() {
+        if (this.$route.params.type === undefined) {
+          this.$router.replace({
+            name: 'route-show-fish-of-type', 
+            params: { type: 'ปลาทั้งหมด' },
+          });
+        }
+      }
+    },
   }
 </script>

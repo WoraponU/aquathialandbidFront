@@ -32,10 +32,22 @@
       }
     },
     created() {
-      this.$router.replace({
-          name: 'route-show-water-tree-of-type', 
+      this.reloadRoute();
+    },
+    watch: {
+      $route() {
+        this.reloadRoute();
+      }
+    },
+    methods: {
+      reloadRoute() {
+        if (this.$route.params.type === undefined) {
+          this.$router.replace({
+            name: 'route-show-water-tree-of-type', 
           params: { type: 'ไม้น้ำทั้งหมด' },
-      });
-    }
+          });
+        }
+      }
+    },
   }
 </script>

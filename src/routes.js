@@ -14,7 +14,6 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        {   path: '/', component: All },
         { 
             path: '/fish',
             component: Fish,
@@ -72,6 +71,17 @@ const router = new VueRouter({
                 { 
                     path: '*/:id',
                     component: ShowItem,            
+                }
+            ],
+        },
+        {   
+            path: '/',
+            component: All,
+            children: [
+                { 
+                    name: 'route-show-all',
+                    path: ':type',
+                    component: ShowCard,            
                 }
             ],
         },

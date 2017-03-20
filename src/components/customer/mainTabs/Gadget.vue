@@ -34,10 +34,22 @@
       }
     },
     created() {
-      this.$router.replace({
-        name: 'route-show-gadget-of-type', 
-        params: { type: 'อุปกรณ์การเลี้ยงทั้งหมด' },
-      });
-    }
+      this.reloadRoute();
+    },
+    watch: {
+      $route() {
+        this.reloadRoute();
+      }
+    },
+    methods: {
+      reloadRoute() {
+        if (this.$route.params.type === undefined) {
+          this.$router.replace({
+            name: 'route-show-gadget-of-type', 
+            params: { type: 'อุปกรณ์การเลี้ยงทั้งหมด' },
+          });
+        }
+      }
+    },
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <SubNavBar>
-      <router-link :to="{ name: 'route-show-all', params: { type: 'ทั้งหมด'} }" tag="a" class="nav-item is-tab" active-class="is-active">ทั้งหมด</router-link>
+      <router-link :to="{ name: 'route-show-all' }" tag="a" class="nav-item is-tab" active-class="is-active">ทั้งหมด</router-link>
     </SubNavBar>
     
     <PageBody>
@@ -32,10 +32,21 @@
       }
     },
     created() {
-      this.$router.replace({
-          name: 'route-show-all', 
-          params: { type: 'ทั้งหมด' },
-      });
-    }
+      this.reloadRoute();
+    },
+    watch: {
+      $route() {
+        this.reloadRoute();
+      }
+    },
+    methods: {
+      reloadRoute() {
+        if (this.$route.params.type === undefined) {
+          this.$router.replace({
+            name: 'route-show-all', 
+          });
+        }
+      }
+    },
   }
 </script>

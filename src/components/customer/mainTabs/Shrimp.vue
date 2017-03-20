@@ -36,10 +36,22 @@
       }
     },
     created() {
-      this.$router.replace({
-          name: 'route-show-shrimp-of-type', 
-          params: { type: 'กุ้งทั้งหมด' },
-      });
-    }
+      this.reloadRoute();
+    },
+    watch: {
+      $route() {
+        this.reloadRoute();
+      }
+    },
+    methods: {
+      reloadRoute() {
+        if (this.$route.params.type === undefined) {
+          this.$router.replace({
+            name: 'route-show-shrimp-of-type', 
+            params: { type: 'กุ้งทั้งหมด' },
+          });
+        }
+      }
+    },
   }
 </script>
