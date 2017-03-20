@@ -14,7 +14,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/', component: All },
+        {   path: '/', component: All },
         { 
             path: '/fish',
             component: Fish,
@@ -49,14 +49,30 @@ const router = new VueRouter({
             path: '/water-tree',
             component: WaterTree,
             children: [
-                { path: ':id', component: WaterTree }
+                { 
+                    name: 'route-show-water-tree-of-type',
+                    path: ':type',
+                    component: ShowCard,            
+                },
+                { 
+                    path: '*/:id',
+                    component: ShowItem,            
+                }
             ],
         },
         { 
             path: '/gadget',
             component: Gadget,
             children: [
-                { path: ':id', component: Gadget }
+                { 
+                    name: 'route-show-gadget-of-type',
+                    path: ':type',
+                    component: ShowCard,            
+                },
+                { 
+                    path: '*/:id',
+                    component: ShowItem,            
+                }
             ],
         },
         // { path: '*', redirect: '/' },

@@ -4,7 +4,7 @@
     <div class="container">
       <nav class="tabs is-boxed">
         <ul>
-          <router-link to="/" tag="li" active-class="is-active" exact>
+          <router-link :to="{ path: '/' }" tag="li" active-class="is-active" exact>
             <a href="#">ทั้งหมด</a>
           </router-link>
           <router-link :to="{ path: '/fish' }" tag="li" active-class="is-active">

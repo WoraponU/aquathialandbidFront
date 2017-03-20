@@ -1,12 +1,11 @@
 <template>
   <div>
     <SubNavBar>
-      <router-link :to="{ path: '/water-tree' }" tag="a" class="nav-item is-tab" active-class="is-active" exact>ทั้งหมด</router-link>
+      <router-link :to="{ name: 'route-show-water-tree-of-type', params: { type: 'ไม้น้ำทั้งหมด'} }" tag="a" class="nav-item is-tab" active-class="is-active">ทั้งหมด</router-link>
     </SubNavBar>
     
     <PageBody>
-      <Card :cardDatas="testData"></Card>
-      {{ id }}
+      <router-view></router-view>
     </PageBody>
   </div>
 </template>
@@ -14,13 +13,11 @@
 <script>
   import PageBody from '../PageBody.vue'
   import SubNavBar from '../SubNavBar.vue'
-  import Card from '../Card.vue'
 
   export default {
     components: {
       SubNavBar,
       PageBody,
-      Card,
     }, 
     data () {
       return {
@@ -35,17 +32,10 @@
       }
     },
     created() {
-      this.reloadId();    
-    },
-    watch: {
-      $route() {
-        this.reloadId();
-      }
-    },
-    methods: {
-      reloadId() {
-        this.id = this.$route.params.id === undefined ? 'ทั้งหมด' : this.$route.params.id;
-      }
+      this.$router.replace({
+          name: 'route-show-water-tree-of-type', 
+          params: { type: 'ไม้น้ำทั้งหมด' },
+      });
     }
   }
 </script>
