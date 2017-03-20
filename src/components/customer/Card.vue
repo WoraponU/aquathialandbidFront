@@ -1,6 +1,6 @@
 <template>
   <div class="columns is-multiline">
-    {{ typeFish }}
+    {{ type }}
     <div class="column is-one-third" v-for="cardData in testData">
       <div class="card">
         <div class="card-image">
@@ -39,7 +39,7 @@
     data () {
       return {
         id: null,
-        typeFish: null,        
+        type: null,        
         testData: [
           { a: 'a' },
           { b: 'b' },
@@ -59,8 +59,8 @@
     },
     methods: {
       reloadId() {
-        this.typeFish = this.$route.params.typeFish;
-      console.log(this.$route.params.typeFish); 
+        this.type = this.$route.params.type;
+      console.log(this.$route.params.type); 
         
       }
     }

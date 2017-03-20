@@ -21,7 +21,7 @@ const router = new VueRouter({
             children: [
                 { 
                     name: 'route-show-fish-of-type',
-                    path: ':typeFish',
+                    path: ':type',
                     component: ShowCard,            
                 },
                 { 
@@ -34,7 +34,15 @@ const router = new VueRouter({
             path: '/shrimp', 
             component: Shrimp,
             children: [
-                { path: ':id', component: Shrimp }
+                { 
+                    name: 'route-show-shrimp-of-type',
+                    path: ':type',
+                    component: ShowCard,            
+                },
+                { 
+                    path: '*/:id',
+                    component: ShowItem,            
+                }
             ],
         },
         { 
