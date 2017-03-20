@@ -7,7 +7,7 @@
           <router-link to="/" tag="li" active-class="is-active" exact>
             <a href="#">ทั้งหมด</a>
           </router-link>
-          <router-link :to="{ name: 'a' }" tag="li" active-class="is-active">
+          <router-link :to="{ path: '/fish' }" tag="li" active-class="is-active">
             <a href="#">ปลา</a>
           </router-link>
           <router-link :to="{ path: '/shrimp' }" tag="li" active-class="is-active">

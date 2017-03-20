@@ -17,11 +17,10 @@ const router = new VueRouter({
         { path: '/', component: All },
         { 
             path: '/fish',
-            name: 'a',
             component: Fish,
             children: [
                 { 
-                    name: 'b',
+                    name: 'route-show-fish-of-type',
                     path: ':typeFish',
                     component: ShowCard,            
                 },
