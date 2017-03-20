@@ -59,9 +59,7 @@
     },
     methods: {
       reloadId() {
-        this.type = this.$route.params.type;
-      console.log(this.$route.params.type); 
-        
+        this.type = ( this.$route.params.type === undefined ) ? 'ทั้งหมด' : this.$route.params.type;
       }
     }
   }

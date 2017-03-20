@@ -36,7 +36,7 @@
     },
     methods: {
       reloadRoute() {
-        if (this.$route.params.type === undefined) {
+        if (this.$route.params.type === undefined && this.$route.params.id === undefined) {
           this.$router.replace({
             name: 'route-show-fish-of-type', 
             params: { type: 'ปลาทั้งหมด' },

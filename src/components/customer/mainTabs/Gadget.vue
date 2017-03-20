@@ -43,7 +43,7 @@
     },
     methods: {
       reloadRoute() {
-        if (this.$route.params.type === undefined) {
+        if (this.$route.params.type === undefined && this.$route.params.id === undefined) {
           this.$router.replace({
             name: 'route-show-gadget-of-type', 
             params: { type: 'อุปกรณ์การเลี้ยงทั้งหมด' },

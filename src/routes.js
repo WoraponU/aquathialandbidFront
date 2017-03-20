@@ -26,7 +26,7 @@ const router = new VueRouter({
                 { 
                     path: '*/:id',
                     component: ShowItem,            
-                }
+                },
             ],
         },
         { 
@@ -80,7 +80,7 @@ const router = new VueRouter({
             children: [
                 { 
                     name: 'route-show-all',
-                    path: ':type',
+                    path: '',
                     component: ShowCard,            
                 }
             ],
