@@ -5,7 +5,7 @@
     </SubNavBar>
     
     <PageBody>
-      <Card :cardDatas="testData"></Card>
+      <Card :cardDatas="testData"></Card>      
       {{ id }}
     </PageBody>
   </div>

@@ -1,6 +1,7 @@
 <template>
   <div class="columns is-multiline">
-    <div class="column is-one-third" v-for="cardData in cardDatas">
+    {{ typeFish }}
+    <div class="column is-one-third" v-for="cardData in testData">
       <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
@@ -35,6 +36,33 @@
 
 <script>
   export default {
-    props: ['cardDatas'],
+    data () {
+      return {
+        id: null,
+        typeFish: null,        
+        testData: [
+          { a: 'a' },
+          { b: 'b' },
+          { c: 'c' },
+          { d: 'd' },
+          { e: 'e' },
+        ],
+      }
+    },
+    created() {
+      this.reloadId();
+    },
+    watch: {
+      $route() {
+        this.reloadId();
+      }
+    },
+    methods: {
+      reloadId() {
+        this.typeFish = this.$route.params.typeFish;
+      console.log(this.$route.params.typeFish); 
+        
+      }
+    }
   }
 </script>

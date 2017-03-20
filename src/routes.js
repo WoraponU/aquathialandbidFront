@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import All from './components/customer/mainTabs/All.vue'
 import Fish from './components/customer/mainTabs/Fish.vue'
 import Shrimp from './components/customer/mainTabs/Shrimp.vue'
 import Gadget from './components/customer/mainTabs/Gadget.vue'
 import WaterTree from './components/customer/mainTabs/WaterTree.vue'
+import ShowItem from './components/customer/ShowItem.vue'
+import ShowCard from './components/customer/Card.vue'
 
 Vue.use(VueRouter);
 
@@ -14,9 +17,18 @@ const router = new VueRouter({
         { path: '/', component: All },
         { 
             path: '/fish',
-            component: Fish, 
+            name: 'a',
+            component: Fish,
             children: [
-                { path: ':id', component: Fish }
+                { 
+                    name: 'b',
+                    path: ':typeFish',
+                    component: ShowCard,            
+                },
+                { 
+                    path: '*/:id',
+                    component: ShowItem,            
+                }
             ],
         },
         { 
@@ -40,7 +52,7 @@ const router = new VueRouter({
                 { path: ':id', component: Gadget }
             ],
         },
-        { path: '*', redirect: '/' },
+        // { path: '*', redirect: '/' },
     ]
 });
 
